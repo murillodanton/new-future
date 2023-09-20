@@ -1,8 +1,15 @@
 import { BodyComposition } from "../../../components/BodyComposition"
 import { HeaderDashboard } from "../../../components/HeaderDashboard"
+import { Select } from "../../../components/Select";
+import { useState } from 'react';
 import * as S from './styles';
 
+const banksOptions = ["Santander", "Bradesco"]
+
 export const Withdraw = () => {
+
+    const [bank, setBank] = useState('');
+
     return (
         <div style={{
             display: 'flex',
@@ -13,24 +20,13 @@ export const Withdraw = () => {
             <BodyComposition>
                 <S.Content>
                     <div>
-                        <h1>Como depositar</h1>
                         <S.AccountColumn>
                             <S.LeftAccountColumn>
-                                <S.LeftAccountRow>
-                                    <div>
-                                        S
-                                    </div>
-                                    <p>Insira os dados da sua Conta no seu banco</p>
-                                </S.LeftAccountRow>
+                                <S.Title>Disponível para Saque</S.Title>
+                                <S.Title>R$5.000,00</S.Title>
                             </S.LeftAccountColumn>
                             <S.RightAccountColumn>
-                                <strong>Nova Futura</strong>
-                                <p>Banco</p>
-                                <strong>0001</strong>
-                                <p>Agência</p>
-                                <strong>161165 - 0</strong>
-                                <p>Conta e dígito</p>
-                                <b>Só é possível receber transferências de contas com a mesma titularidade</b>
+                                <Select placeholder="Selecione o banco" label="Banco" onChange={setBank} value={bank} options={banksOptions} />
                             </S.RightAccountColumn>
                         </S.AccountColumn>
                     </div>
