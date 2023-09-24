@@ -17,7 +17,8 @@ align-items: center;
 justify-content: center;
 
 
-width: 150px;
+width: 229px;
+height: 80px;
 
 a{
     ${({active}) => active && `
@@ -33,10 +34,50 @@ export const NavLink = styled.a`
     color: ${PRIMARY_COLORS.NIGHT_BLUE};
     text-decoration: none;
 
-    padding: 16px 0;
-
     font-size: 16px;
     font-weight: 600;
     white-space: nowrap;
 
+`;
+
+export const LogoContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 48px;
+`;
+
+export const UserInfo = styled.div`
+    display: flex;
+
+    width: 317px;
+    height: 80px;
+
+    align-items: center;
+    justify-content:space-between;
+
+    padding: 16px 20px;
+
+    background-color: ${PRIMARY_COLORS.NIGHT_BLUE};
+    `;
+
+export const UserMoney = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    color: ${NEUTRAL_COLORS.WHITE};
+
+    span{
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    p{
+        font-size: 16px;
+        font-weight: 600;
+    }
 `;

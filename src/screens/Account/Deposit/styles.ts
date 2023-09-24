@@ -22,6 +22,8 @@ export const RightAccountColumn = styled.div`
     display: flex;
     flex-direction: column;
 
+    height: 350px;
+
     gap: 16px;
 
     background-color: ${NEUTRAL_COLORS.WHITE};
@@ -45,15 +47,47 @@ export const RightAccountColumn = styled.div`
         font-weight: 500;
     }
 
+.first{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+`;
+
+export const RowRightAccountColumn = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`;
+
+export const LeftItemRow = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 16px;
+
 `;
 
 export const LeftAccountColumn = styled.div`
     display: flex;
     flex-direction: column;
+
+    gap: 32px;
+
+    max-width: 472px;
+    width: 100%;
+
+    max-height: 304px;
+    height: 100%;
 `;
 
 export const Title = styled.h1`
     color: ${NEUTRAL_COLORS.WHITE};
+
+    margin-bottom: 48px;
 `;
 
 export const LeftAccountRow = styled.div`
@@ -72,13 +106,16 @@ export const LeftAccountRow = styled.div`
 
         background-color: ${PRIMARY_COLORS.ELETRIC_BLUE};
 
-        padding: 10px 16px;
+        min-width: 40px;
+        min-height: 40px;
 
-        border-radius: 99px;
+        border-radius: 999px;
     }
 
     p{
-        font-size: 16px;
+        font-size: 20px;
+        font-weight: 500;
         color: ${NEUTRAL_COLORS.WHITE};
+        padding-right: 20px;
     }
 `;

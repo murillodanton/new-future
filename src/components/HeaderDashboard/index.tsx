@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import * as S from './styles';
+import { Logo } from "../../assets/icons/logo/Logo";
 
 export const HeaderDashboard = () => {
 
@@ -34,6 +35,9 @@ export const HeaderDashboard = () => {
 
     return (
         <S.Container>
+            <S.LogoContainer>
+                <Logo size={50} />
+            </S.LogoContainer>
             {pathnamePage.map((item, index) => {
                 return (
                     <S.NavLinkContainer active={item.path === pathname} key={item.name}>
@@ -43,6 +47,17 @@ export const HeaderDashboard = () => {
                     </S.NavLinkContainer>
                 )
             })}
+            <S.UserInfo>
+                <S.UserMoney>
+                    <p>Patrimonio</p>
+                    <p>
+                        R$ 5000,00
+                    </p>
+                </S.UserMoney>
+                <div>
+
+                </div>
+            </S.UserInfo>
         </S.Container>
     )
 }
